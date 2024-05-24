@@ -19,13 +19,13 @@ const Header = () => {
     const cart = useCartStore(state => state.cart);
 
     let is_admin: boolean;
-    let user_id: number;
+
     let avatar: string;
 
   if(isAuth) {
     const tokenDecoded: Token = jwt_decode(token)
     is_admin = tokenDecoded.is_staff;
-    user_id = tokenDecoded.user_id;
+
     avatar = String(tokenDecoded.avatar)
   } 
 
