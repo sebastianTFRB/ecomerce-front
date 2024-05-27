@@ -8,7 +8,7 @@ function logout() {
     window.location.href = '/login'
 }
 
-const baseURL = "cloud2024b.azurewebsites.net"
+const baseURL = import.meta.env.VITE_BACKEND_URL
 
 export const axi = axios.create({
     baseURL
